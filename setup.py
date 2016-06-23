@@ -10,5 +10,5 @@ setup(name='progressbar',
 	#scripts=[''],
 	#test_suite = ,
 	#package_dir{'':''}
-	py_modules=['progressbar'] ,
+	py_modules=['ProgressBar'] ,
 )
