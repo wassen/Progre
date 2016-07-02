@@ -2,7 +2,7 @@
 import sys
 import time
 
-class pss:
+class Progre:
 
 	MAX_LENGTH_OF_BAR = 30
 	@classmethod
