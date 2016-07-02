@@ -2,10 +2,9 @@
 import sys
 import time
 
-class ProgressBar:
+class pss:
 
 	MAX_LENGTH_OF_BAR = 30
-
 	@classmethod
 	def single_generator(cls,iterable):
 		pb = cls(iterable)
@@ -20,7 +19,6 @@ class ProgressBar:
 				self.display_progressbar()
 
 	def display_progressbar(self, *currentNums): #, color = None
-
 
 		if currentNums == ():
 			currentNums = self.defaultCurrentNums;
@@ -107,6 +105,14 @@ class ProgressBar:
 	@classmethod
 	def isiterable(cls, obj):
 		return isinstance(obj, str) or hasattr(obj, '__iter__')
+
+	def flatten(iterable):
+		while any(hasattr(item, '__iter__') for item in iterable):
+			flat = []
+			[flat.extend(item) if hasattr(item,  '__iter__') else flat.append(item) for item in iterable]
+			iterable = flat
+
+		return iterable
 
 	def __init__(self,*args):
 		self.start = time.time()
